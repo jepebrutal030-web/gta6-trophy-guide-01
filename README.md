@@ -1,4 +1,4 @@
-# Leonida Trophy Guide: GTA VI, all 55 trophies
+# Leonida Trophy Atlas: GTA VI, all 55 trophies
 
 [![Rank](https://make.fun/badge/gta6-trophy-guide-01/jepebrutal030-web/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 [![Reward](https://make.fun/badge/gta6-trophy-guide-01/jepebrutal030-web/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
@@ -13,9 +13,9 @@ A static web app under `app/` that opens in desktop Chrome with the network off.
 ## What it covers
 
 - **All 55 trophies**: 1 platinum, 2 gold, 6 silver, 46 bronze, 28 of them hidden on PlayStation until earned. Names, descriptions and grades are as PlayStation publishes them, as listed by Exophase and PSNProfiles.
-- **Roadmap to the platinum**: five stages in order. Story first, then side characters, then the map, then the grind, then the platinum.
-- **Missable flags**: 23 trophies tied to a specific mission, choice or one-time moment, flagged so you do them when the chance comes.
-- **Filters**: by kind (story, missable, collectibles, activities, online), by grade, by earned state, plus full text search.
+- **Roadmap to the platinum**: five stages in order, each showing how many of its trophies you have earned. Story first, then side characters, then the map, then the grind, then the platinum.
+- **Missable flags**: 23 trophies tied to one mission, choice or moment, flagged so you do them when the chance comes.
+- **Filters**: by kind (story, missable, collectibles, activities, online), by grade, by earned state, plus full text search and three sort orders.
 - **Spoiler mode**: hides the names and descriptions of hidden story trophies until you earn them.
 - **Cited guides**: every guide names its sources. No guide text is copied from another guide. The look is our own: no Rockstar logo, no official artwork, no screenshots of the game.
 
@@ -40,6 +40,6 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ## Files
 
 - `app/index.html`, `app/style.css`, `app/app.js`: the guide app.
-- `app/data/trophies.json`: the 55 trophies with official data plus our guides, kinds, missable flags, hidden flags and roadmap stages.
+- `app/data/trophies.json`: the 55 trophies with official data plus our guides, kinds, missable flags, hidden flags, counts and roadmap stages.
 - `screenshots/`: 4 renders of the app in a browser (the first is the cover).
 - `main.ts`: the entrypoint. `serve.ts`: the local dev server. `vendor/makefun-frontend.ts`: the kit's dossier library, unchanged.
