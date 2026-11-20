@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide: GTA VI, all 55 trophies</title>
+<meta name="description" content="A complete offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI: roadmap to platinum, missable flags, cited guides.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="sub">All 55 trophies, in your own words, with a roadmap to the platinum. Works fully offline. Your progress stays in this browser.</p>
+    <div class="progress-wrap" aria-label="Progress">
+      <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width: 0%"></div></div>
+      <p id="progressText" class="progress-text">0 of 55 earned · 0%</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to the platinum">
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">Five stages, in order. Story first, then side characters, then the map, then the grind. The platinum pops with the last trophy you finish.</p>
+    <ol class="stages" id="stages"></ol>
+    <p class="roadmap-note">Missable means the trophy is tied to a specific mission, choice or one-time moment. Do it when the chance comes. Story missions can be replayed from the pause menu, so a missed mission trophy is recoverable, but the flagged moments are easiest the first time through.</p>
+  </section>
+
+  <section class="controls" aria-label="Find a trophy">
+    <div class="control-row">
+      <label class="search-label">Search
+        <input id="search" type="search" placeholder="Trophy name, mission, activity..." autocomplete="off">
+      </label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="missable">Missable</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label>Grade
+        <select id="grade">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Show
+        <select id="show">
+          <option value="all">All trophies</option>
+          <option value="todo">Not earned yet</option>
+          <option value="earned">Earned</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="sort">
+          <option value="roadmap">Roadmap order</option>
+          <option value="grade">Grade, best first</option>
+          <option value="name">Name, A to Z</option>
+        </select>
+      </label>
+    </div>
+    <div class="control-row">
+      <label class="toggle"><input id="spoiler" type="checkbox"> Spoiler mode: hide story trophy names until earned</label>
+      <label class="toggle"><input id="missableOnly" type="checkbox"> Missable only</label>
+      <span class="spacer"></span>
+      <button id="export" type="button">Export progress</button>
+      <label class="import-btn">Import progress <input id="import" type="file" accept="application/json"></label>
+      <button id="reset" type="button">Reset</button>
+    </div>
+    <p id="countText" class="count-text"></p>
+  </section>
+
+  <section aria-label="Trophy list">
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p id="emptyText" class="empty-text" hidden>No trophies match. Clear the search or change the filters.</p>
+  </section>
+
+  <section class="sources-note" aria-label="About the sources">
+    <h2>Where the facts come from</h2>
+    <p>Trophy names, descriptions and grades are as PlayStation publishes them, as listed by Exophase and PSNProfiles (the two lists agree on every name, description and grade). Every guide is written in our own words for this entry and names its sources beside it. No guide text is copied from another guide. The game itself is not pictured here: this guide uses its own look, no Rockstar logo, no official artwork, no screenshots of the game.</p>
+  </section>
+</main>
+
+<div class="detail" id="detail" hidden role="dialog" aria-modal="true" aria-labelledby="detailName">
+  <div class="detail-card">
+    <button id="detailClose" class="detail-close" type="button" aria-label="Close">Close</button>
+    <p id="detailGrade" class="detail-grade"></p>
+    <h2 id="detailName"></h2>
+    <p id="detailDesc" class="detail-desc"></p>
+    <div id="detailMeta" class="detail-meta"></div>
+    <h3>How to get it</h3>
+    <p id="detailGuide" class="detail-guide"></p>
+    <h3>Sources</h3>
+    <ul id="detailSources" class="detail-sources"></ul>
+    <label class="detail-earned"><input id="detailEarned" type="checkbox"> I earned this trophy</label>
+  </div>
+</div>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
